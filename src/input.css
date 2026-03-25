@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@source "../templates/**/*.twig";
+@source "../*.php";
+
+/* CSS PERSONALIZADO COMIENZA AQUÍ */

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+    <meta charset="{{ site.charset }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ wp_title }}</title>
+    
+    <link rel="stylesheet" href="{{ site.theme.link }}/style.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    {{ wp_head }}
+</head>
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="{{ site.link }}" class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition">
+                {{ site.name }}
+            </a>
+            
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-blue-600">Inicio</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Servicios</a></li>
+                    <li><a href="#" class="hover:text-blue-600">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        {% block content %}
+            {% endblock %}
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-auto">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <p>&copy; {{ "now"|date('Y') }} {{ site.name }}. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    {{ wp_footer }}
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Dependencias de Composer
+/vendor/
+
+# Archivos de Tailwind CSS generados (opcional, pero recomendado si compilarás en producción)
+# style.css
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de registro y caché
+*.log
+.cache/
+tailwindcss
+tailwindcss
